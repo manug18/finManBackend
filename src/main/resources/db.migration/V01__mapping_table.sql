@@ -1,0 +1,7 @@
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+
+CREATE TABLE IF NOT EXISTS person (
+    id UUID PRIMARY KEY,
+    name TEXT NOT NULL
+);

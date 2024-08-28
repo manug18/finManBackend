@@ -1,4 +1,4 @@
-package com.example.finMan
+package com.finMan
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
