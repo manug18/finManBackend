@@ -1,9 +1,6 @@
 package com.finMan.model
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.GenerationType
-import jakarta.persistence.Id
+import jakarta.persistence.*
 import java.util.*
 
 @Entity
@@ -13,6 +10,10 @@ data class Person(
     @GeneratedValue(strategy = GenerationType.UUID)
     var id: UUID? = null,
 
-    var name:String
+    var name:String,
+
+    @OneToMany(mappedBy = "person")
+
+    val expenseCategories: MutableList<PersonSpecificExpenseCategory> = mutableListOf()
 
     )
