@@ -10,10 +10,10 @@ data class Person(
     @GeneratedValue(strategy = GenerationType.UUID)
     var id: UUID? = null,
 
-    var name:String,
+    var name: String,
 
     @OneToMany(mappedBy = "person")
 
     val expenseCategories: MutableList<PersonSpecificExpenseCategory> = mutableListOf()
 
-    )
+)

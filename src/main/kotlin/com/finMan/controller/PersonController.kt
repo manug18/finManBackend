@@ -17,7 +17,7 @@ class PersonController(
 ) {
     @PostMapping
     fun addPerson(@RequestBody person: Person?): ResponseEntity<Response<Person>> {
-        val person= personService.addPerson(person)
-        return ResponseEntity.ok(Response(message = "Person added is " , data = person));
+        val person = personService.addPerson(person)
+        return ResponseEntity.ok(Response(message = "Person added is ", data = person));
     }
 }

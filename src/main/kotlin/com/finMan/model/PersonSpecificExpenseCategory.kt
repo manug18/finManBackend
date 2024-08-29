@@ -7,14 +7,14 @@ import java.util.*
 data class PersonSpecificExpenseCategory(
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    var id: UUID?=null,
+    var id: UUID? = null,
 
-    var categoryName:String,
+    var categoryName: String,
 
 
-    var categoryImgUrl:String?,
+    var categoryImgUrl: String?,
     @ManyToOne
     @JoinColumn(name = "person_id")
-    var person: Person?=null
+    var person: Person? = null
 ) {
 }
